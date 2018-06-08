@@ -1,4 +1,6 @@
-﻿using System.Collections;
+﻿//script de deteccion de objetos
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -12,7 +14,8 @@ public class PlayerMovement : MonoBehaviour {
 		
 	}
 	
-	// Update is called once per frame
+	// movimiento del jugador 
+    // movimiento de derecha a izquierda
 	void Update () {
 
 		Target.transform.position = new Vector3(Target.transform.position.x, Target.transform.position.y, transform.position.z);
@@ -21,6 +24,7 @@ public class PlayerMovement : MonoBehaviour {
 		
 	}
 
+    // interaccion con los bloques
 	void OnTriggerExit(Collider other)
 	{
 		if(other.gameObject.tag == "Plantilla")
@@ -30,6 +34,7 @@ public class PlayerMovement : MonoBehaviour {
 		}
 		
 	}
+
 
 	void OnTriggerEnter(Collider other)
 	{
@@ -55,6 +60,7 @@ public class PlayerMovement : MonoBehaviour {
 		}
 	}
 
+    // reinicio de nivel
 	private IEnumerator Restart()
 	{
 		yield return new WaitForSeconds(1.5f);

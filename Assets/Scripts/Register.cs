@@ -1,4 +1,6 @@
-﻿using System.Collections;
+﻿//swipe del jugador
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -117,7 +119,7 @@ public class Register : MonoBehaviour
 		}
 		
 	}
-
+    // duracion de salto
 	private IEnumerator Jump()
 	{
 		if(Jumping == false)
@@ -131,6 +133,7 @@ public class Register : MonoBehaviour
 		Jumping = false;
 	}
 
+    // duracion de slide
 	private IEnumerator Slide()
 	{
 		if(Sliding == false)
