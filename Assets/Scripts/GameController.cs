@@ -5,8 +5,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class GameController : MonoBehaviour {
-	
-	public float Speed = 11f;
+
+	//public float Speed_floor = 11f;
 	public static GameController instance;
 
 	void Awake()
@@ -26,9 +26,9 @@ public class GameController : MonoBehaviour {
 
 	public void DeAccel()
 	{
-		while(Speed > 0)
+		while(Speed_floor > 0)
 		{
-			Speed -= 0.01f;
+			Speed_floor -= 0.01f;
 		}
 	} 
 }

@@ -8,7 +8,7 @@ public class Movement : MonoBehaviour {
 
 	Transform Move;
 	public static Movement instance;
-	public float Speed = 0.2f;
+	//*public float Speed = 0.2f; //no sirve
 
 	void Awake()
 	{
@@ -31,11 +31,11 @@ public class Movement : MonoBehaviour {
 	 
 	public void DeAccel()
 	{
-		GameController.instance.Speed -= 0.01f;
+		GameController.instance.Speed_floor -= 0.01f;
 	} 
 	public void Halt()
 	{
-		GameController.instance.Speed = 0;
+		GameController.instance.Speed_floor = 0;
 	}
 
 	

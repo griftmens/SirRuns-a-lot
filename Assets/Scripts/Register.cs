@@ -13,9 +13,10 @@ public enum Swipe
 	Right,
 }
 
-public class Register : MonoBehaviour
+public class Register 
 {
-	public float MinSwipeLength = 5f;
+
+	/*public float MinSwipeLength = 5f;
 
 	private Vector3 firstPressPos;
 	private Vector3 secondPressPos;
@@ -31,7 +32,7 @@ public class Register : MonoBehaviour
 	public Transform Player;
 	public bool Sliding, Jumping;
 
-	public int Lane;
+	public int Lane;*/
 
 	void Awake()
     {

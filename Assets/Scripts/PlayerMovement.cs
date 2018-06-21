@@ -1,4 +1,4 @@
-﻿//script de deteccion de objetos
+﻿//objeto vacio que hace que cambie el punto de origen del personaje para poder hacer que se mueva, etc.
 
 using System.Collections;
 using System.Collections.Generic;
@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour {
 
-	public Transform Target;
+	public Transform Target_origin;
 
 	// Use this for initialization
 	void Start () {
@@ -18,9 +18,9 @@ public class PlayerMovement : MonoBehaviour {
     // movimiento de derecha a izquierda
 	void Update () {
 
-		Target.transform.position = new Vector3(Target.transform.position.x, Target.transform.position.y, transform.position.z);
+		Target_origin.transform.position = new Vector3(Target_origin.transform.position.x, Target_origin.transform.position.y, transform.position.z);
 
-		transform.position = Vector3.MoveTowards(transform.position,Target.position, 10 * Time.deltaTime);
+		transform.position = Vector3.MoveTowards(transform.position,Target_origin.position, 10 * Time.deltaTime);
 		
 	}
 
@@ -40,7 +40,7 @@ public class PlayerMovement : MonoBehaviour {
 	{
 		if(other.gameObject.tag == "Cobweb")
 		{
-			GameController.instance.Speed = 0;
+			GameController.instance.Speed_floor = 0;
 			StopCoroutine("Restart");
 			StartCoroutine("Restart");
 		}
