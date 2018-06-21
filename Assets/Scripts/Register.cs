@@ -16,7 +16,7 @@ public enum Swipe
 public class Register 
 {
 
-	/*public float MinSwipeLength = 5f;
+    /*public float MinSwipeLength = 5f;
 
 	private Vector3 firstPressPos;
 	private Vector3 secondPressPos;
@@ -25,7 +25,7 @@ public class Register
 	private Vector3 firstClickPos;
 	private Vector3 secondClickPos;
 
-	public static Swipe SwipeDirection;
+	
 
 	public Transform targetS;
 	public Transform targetJ;
@@ -34,28 +34,32 @@ public class Register
 
 	public int Lane;*/
 
-	void Awake()
+    Entidades ent = new Entidades();
+
+    public static Swipe SwipeDirection;
+
+    void Awake()
     {
        
     }
 
 	private void Start()
 	{
-		Jumping = false;
-		Sliding = false;
-		Lane = 1;
+		ent.Jumping = false;
+		ent.Sliding = false;
+		ent.Lane = 1;
 	}
 	
 	private void Update()
 	{
 		DetectSwipe();
 
-		if(Lane < 0)
+		if(ent.Lane < 0)
 		{
-			Lane = 0;
-		}else if(Lane > 2)
+			ent.Lane = 0;
+		}else if(ent.Lane > 2)
 		{
-			Lane = 2;
+			ent.Lane = 2;
 		}
 	}
 
@@ -64,7 +68,7 @@ public class Register
 		
 		if (Input.GetMouseButtonDown(0))
 		{
-			firstClickPos = new Vector3(Input.mousePosition.x, Input.mousePosition.y);
+			ent.firstClickPos = new Vector3(Input.mousePosition.x, Input.mousePosition.y);
 		}
 		else
 		{
@@ -72,50 +76,50 @@ public class Register
 		}
 		if (Input.GetMouseButtonUp(0))
 		{
-			secondClickPos = new Vector3(Input.mousePosition.x, Input.mousePosition.y);
-			currentSwipe = new Vector3(secondClickPos.x - firstClickPos.x, secondClickPos.y - firstClickPos.y);
+			ent.secondClickPos = new Vector3(Input.mousePosition.x, Input.mousePosition.y);
+			ent.currentSwipe = new Vector3(ent.secondClickPos.x - ent.firstClickPos.x, ent.secondClickPos.y - ent.firstClickPos.y);
 		
-			if (currentSwipe.magnitude < MinSwipeLength)
+			if (ent.currentSwipe.magnitude < ent.MinSwipeLength)
 			{
 				SwipeDirection = Swipe.None;
 				return;
 			}
 
-			currentSwipe.Normalize();
+			ent.currentSwipe.Normalize();
 			
-			if (currentSwipe.y > 0 && currentSwipe.x > -0.5f && currentSwipe.x < 0.5f  && Jumping == false && Sliding == false && Player.transform.position.y == 1.5f)
+			if (ent.currentSwipe.y > 0 && ent.currentSwipe.x > -0.5f && ent.currentSwipe.x < 0.5f  && ent.Jumping == false && ent.Sliding == false && ent.Player.transform.position.y == 1.5f)
 			{
 				SwipeDirection = Swipe.Up;
 				Debug.Log("Arriba");
-				targetS.transform.position = targetJ.transform.position;
-				Jumping = true;
+				ent.targetS.transform.position = ent.targetJ.transform.position;
+				ent.Jumping = true;
 				StopCoroutine("Jump");
 				StartCoroutine("Jump");
 				
 			}
-			else if (currentSwipe.y < 0 && currentSwipe.x > -0.5f && currentSwipe.x < 0.5f && Sliding == false && Jumping == false && Player.transform.position.y == 1.5f)
+			else if (ent.currentSwipe.y < 0 && ent.currentSwipe.x > -0.5f && ent.currentSwipe.x < 0.5f && ent.Sliding == false && ent.Jumping == false && ent.Player.transform.position.y == 1.5f)
 			{
 				SwipeDirection = Swipe.Down;
 				Debug.Log("Abajo");
-				targetS.transform.position += new Vector3(0, -0.5f, 0);
-				Player.transform.rotation = Quaternion.Euler (-90,0,0);
-				Sliding = true;
+				ent.targetS.transform.position += new Vector3(0, -0.5f, 0);
+				ent.Player.transform.rotation = Quaternion.Euler (-90,0,0);
+				ent.Sliding = true;
 				StopCoroutine("Slide");
 				StartCoroutine("Slide");
 			}
-			else if (currentSwipe.x < 0 && currentSwipe.y > -0.5f && currentSwipe.y < 0.5f && Lane != 0)
+			else if (ent.currentSwipe.x < 0 && ent.currentSwipe.y > -0.5f && ent.currentSwipe.y < 0.5f && ent.Lane != 0)
 			{
 				SwipeDirection = Swipe.Left;
 				Debug.Log("Izquierda");
-				Lane -= 1;
-				targetS.transform.position += new Vector3(-1.5f, 0, 0);
+				ent.Lane -= 1;
+				ent.targetS.transform.position += new Vector3(-1.5f, 0, 0);
 			}
-			else if (currentSwipe.x > 0 && currentSwipe.y > -0.5f && currentSwipe.y < 0.5f && Lane != 2)
+			else if (ent.currentSwipe.x > 0 && ent.currentSwipe.y > -0.5f && ent.currentSwipe.y < 0.5f && ent.Lane != 2)
 				{
 				SwipeDirection = Swipe.Right;
 				Debug.Log("Derecha");
-				Lane += 1;
-				targetS.transform.position += new Vector3(1.5f, 0, 0);
+				ent.Lane += 1;
+				ent.targetS.transform.position += new Vector3(1.5f, 0, 0);
 			} 
 		}
 		
@@ -123,29 +127,29 @@ public class Register
     // duracion de salto
 	private IEnumerator Jump()
 	{
-		if(Jumping == false)
+		if(ent.Jumping == false)
 		{
 			yield return null;
 		}
 
 		yield return new WaitForSeconds(0.4f);
 		
-		targetS.transform.position = new Vector3(targetS.transform.position.x,1.5f,targetS.transform.position.z);
-		Jumping = false;
+		ent.targetS.transform.position = new Vector3(ent.targetS.transform.position.x,1.5f,ent.targetS.transform.position.z);
+		ent.Jumping = false;
 	}
 
     // duracion de slide
 	private IEnumerator Slide()
 	{
-		if(Sliding == false)
+		if(ent.Sliding == false)
 		{
 			yield return null;
 		}
 		
 		yield return new WaitForSeconds(0.5f);
 
-		targetS.transform.position += new Vector3(0, 0.5f, 0);
-		Player.transform.rotation = Quaternion.Euler (0,0,0);
-		Sliding = false;
+		ent.targetS.transform.position += new Vector3(0, 0.5f, 0);
+		ent.Player.transform.rotation = Quaternion.Euler (0,0,0);
+		ent.Sliding = false;
 	}	
 }

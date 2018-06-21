@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour {
 
+    Mundo mun = new Mundo();
 	public Transform Target_origin;
 
 	// Use this for initialization
@@ -40,7 +41,7 @@ public class PlayerMovement : MonoBehaviour {
 	{
 		if(other.gameObject.tag == "Cobweb")
 		{
-			GameController.instance.Speed_floor = 0;
+			mun.Speed_floor = 0;
 			StopCoroutine("Restart");
 			StartCoroutine("Restart");
 		}

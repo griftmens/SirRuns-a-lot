@@ -6,9 +6,10 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour {
 
+    Mundo mun = new Mundo();
 	Transform Move;
 	public static Movement instance;
-	//*public float Speed = 0.2f; //no sirve
+	//public float Speed = 0.2f; //no sirve
 
 	void Awake()
 	{
@@ -25,17 +26,17 @@ public class Movement : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		Move.transform.position += new Vector3(0,0,-GameController.instance.Speed) * Time.deltaTime;
+		Move.transform.position += new Vector3(0,0,-mun.Speed_floor) * Time.deltaTime;
 		
 	}
 	 
 	public void DeAccel()
 	{
-		GameController.instance.Speed_floor -= 0.01f;
+		mun.Speed_floor -= 0.01f;
 	} 
 	public void Halt()
 	{
-		GameController.instance.Speed_floor = 0;
+		mun.Speed_floor = 0;
 	}
 
 	
