@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerManager : MonoBehaviour {
 
+	public static Transform playerRef;
+	
 	public float transitionSpeed = 1f;
 
 	private Player playerInfo;
@@ -16,6 +18,7 @@ public class PlayerManager : MonoBehaviour {
 
 	void Start () {
 		playerInfo = new Player(1, "Rana", 5f, 10f);
+		playerRef = transform;
 		rb = GetComponent<Rigidbody>();
 		SetPosition();
 	}
@@ -63,3 +66,6 @@ public class PlayerManager : MonoBehaviour {
 
 	}
 }
+
+
+//colisiones

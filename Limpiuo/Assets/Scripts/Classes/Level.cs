@@ -38,4 +38,9 @@ public class Level : Entity {
 	public void AddToCounter () {
 		moduleCounter++;
 	}
+
+	public bool EndLevel () {
+		if (moduleCounter >= maxModules) return true;
+		return false;
+	}
 }
