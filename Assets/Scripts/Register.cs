@@ -34,6 +34,10 @@ public class Register
 
 	public int Lane;*/
 
+	private IEnumerator jump;
+	private IEnumerator slide;
+
+
     Entidades ent = new Entidades();
 
     public static Swipe SwipeDirection;
@@ -93,8 +97,12 @@ public class Register
 				Debug.Log("Arriba");
 				ent.targetS.transform.position = ent.targetJ.transform.position;
 				ent.Jumping = true;
-				StopCoroutine("Jump");
-				StartCoroutine("Jump");
+
+				if (jump == null)
+					jump = Jump();
+				
+				Helper.instance.StopCoroutine(jump);
+				Helper.instance.StartCoroutine(jump);
 				
 			}
 			else if (ent.currentSwipe.y < 0 && ent.currentSwipe.x > -0.5f && ent.currentSwipe.x < 0.5f && ent.Sliding == false && ent.Jumping == false && ent.Player.transform.position.y == 1.5f)
@@ -104,8 +112,13 @@ public class Register
 				ent.targetS.transform.position += new Vector3(0, -0.5f, 0);
 				ent.Player.transform.rotation = Quaternion.Euler (-90,0,0);
 				ent.Sliding = true;
-				StopCoroutine("Slide");
-				StartCoroutine("Slide");
+
+				if(slide == null)
+					slide = Slide();			
+
+				Helper.instance.StopCoroutine(slide);
+				Helper.instance.StartCoroutine(slide);
+				
 			}
 			else if (ent.currentSwipe.x < 0 && ent.currentSwipe.y > -0.5f && ent.currentSwipe.y < 0.5f && ent.Lane != 0)
 			{

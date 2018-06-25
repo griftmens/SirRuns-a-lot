@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour {
 
+	Mundo mun = new Mundo();
 	//public float Speed_floor = 11f;
 	public static GameController instance;
 
@@ -26,9 +27,9 @@ public class GameController : MonoBehaviour {
 
 	public void DeAccel()
 	{
-		while(Speed_floor > 0)
+		while(mun.Speed_floor > 0)
 		{
-			Speed_floor -= 0.01f;
+			mun.Speed_floor -= 0.01f;
 		}
 	} 
 }
