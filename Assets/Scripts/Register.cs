@@ -93,14 +93,14 @@ public class Register : MonoBehaviour
 			{
 				SwipeDirection = Swipe.Up;
 				Debug.Log("Arriba");
-				targetS.transform.position = targetJ.transform.position;
-				Jumping = true;
+				targetS.transform.position = targetJ.transform.position; //Salto
+				Jumping = true; //Salto
 
-				if (jump == null)
-					jump = Jump();
+				//if (jump == null)
+					//jump = Jump(); 
 				
-				StopCoroutine("Jump");
-				StartCoroutine("Jump");
+				StopCoroutine("Jump");//Salto
+				StartCoroutine("Jump");//Salto
 				
 			}
 			else if (currentSwipe.y < 0 && currentSwipe.x > -0.5f && currentSwipe.x < 0.5f && Sliding == false && Jumping == false && Player.transform.position.y == 1.5f)
@@ -136,7 +136,7 @@ public class Register : MonoBehaviour
 		
 	}
     // duracion de salto
-	private IEnumerator Jump()
+	private IEnumerator Jump() //Salto
 	{
 		if(Jumping == false)
 		{

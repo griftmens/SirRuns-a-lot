@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 public class PlayerMovement : MonoBehaviour {
 
     //Mundo mun = new Mundo();
-	public Transform Target_origin;
+	public Transform Target_origin; //Salto
 
 	// Use this for initialization
 	void Start () {
@@ -21,7 +21,7 @@ public class PlayerMovement : MonoBehaviour {
 
 		Target_origin.transform.position = new Vector3(Target_origin.transform.position.x, Target_origin.transform.position.y, transform.position.z);
 
-		transform.position = Vector3.MoveTowards(transform.position,Target_origin.position, 10 * Time.deltaTime);
+		transform.position = Vector3.MoveTowards(transform.position,Target_origin.position, 10 * Time.deltaTime); //Salto
 		
 	}
 
