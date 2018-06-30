@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerView
 {
 
-	public static PlayerView instance;
+	/*public static PlayerView instance;
 
 	void Awake()
 	{
@@ -19,5 +19,5 @@ public class PlayerView
 	// Update is called once per frame
 	public void Update () {
 		
-	}
+	}*/
 }

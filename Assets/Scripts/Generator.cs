@@ -9,6 +9,15 @@ public class Generator : MonoBehaviour {
 	public GameObject[] Template;
 	public static Generator instance;
 
+	//procedural
+	public GameObject[] tiles;
+	public GameObject firstPos;
+    public int[] order;
+
+
+    public Transform startingPos;
+	//
+
 	
 	void Awake()
 	{
@@ -18,7 +27,14 @@ public class Generator : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
-		InvokeRepeating("Spawn",1.25f,1.25f);
+			startingPos.position = firstPos.transform.position;
+            //GameObject tile = Instantiate(Template[Random.Range(0,Template.Length)], firstPos.transform.position, Quaternion.identity);
+			GameObject tile = Instantiate(Template[Random.Range(0,Template.Length)], startingPos.position, Quaternion.identity);
+
+
+        string[] numbers = "1-2-3-4-5-6-7-8-9-0".Split('-');
+        Debug.Log(numbers[5]);
+		//InvokeRepeating("Spawn",1.25f,1.25f);
 		
 	}
 	
@@ -29,6 +45,8 @@ public class Generator : MonoBehaviour {
 
 	public void Spawn()
 	{
-		Instantiate(Template[Random.Range(0,8)], transform.position, transform.rotation);
+		GameObject tile = Instantiate(Template[Random.Range(0,Template.Length)], startingPos.position, Quaternion.identity);
+        startingPos = tile.transform.Find("Helper");
+		//Instantiate(Template[Random.Range(0,8)], transform.position, transform.rotation);
 	}
 }

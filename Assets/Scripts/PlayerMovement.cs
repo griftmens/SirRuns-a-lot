@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour {
 
-    Mundo mun = new Mundo();
+    //Mundo mun = new Mundo();
 	public Transform Target_origin;
 
 	// Use this for initialization
@@ -30,7 +30,7 @@ public class PlayerMovement : MonoBehaviour {
 	{
 		if(other.gameObject.tag == "Plantilla")
 		{
-			//Generator.instance.Spawn();
+			Generator.instance.Spawn();
 			Destroy(other.gameObject,1.5f);	
 		}
 		
@@ -41,7 +41,8 @@ public class PlayerMovement : MonoBehaviour {
 	{
 		if(other.gameObject.tag == "Cobweb")
 		{
-			mun.Speed_floor = 0;
+			GameController.instance.Speed_floor = 0;
+			//Speed_floor = 0;
 			StopCoroutine("Restart");
 			StartCoroutine("Restart");
 		}

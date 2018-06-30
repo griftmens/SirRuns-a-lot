@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerController{
 
-	public static PlayerController instance;
+	/*public static PlayerController instance;
 	
 	void Awake()
 	{
@@ -15,5 +15,5 @@ public class PlayerController{
 	}
 	public void Update () {
 		
-	}
+	}*/
 }

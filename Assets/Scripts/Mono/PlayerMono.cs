@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerMono : MonoBehaviour {
 
-	public PlayerController playerController;
+	/*public PlayerController playerController;
 	//public PlayerView playerView;
 	//public PlayerModel playerModel;
 	public Transform startingPos;
@@ -61,5 +61,5 @@ public class PlayerMono : MonoBehaviour {
 		
 		transform.position = new Vector3(startingPos.position.x,1.5f,startingPos.position.z);
 		jumping = false;
-	}
+	}*/
 }

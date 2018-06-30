@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerModel : MonoBehaviour {
 
-	public enum Swipe
+	/*public enum Swipe
 	{
 	None,
 	Up,
@@ -26,5 +26,5 @@ public class PlayerModel : MonoBehaviour {
 	// Update is called once per frame
 	public void Update () {
 		
-	}
+	}*/
 }

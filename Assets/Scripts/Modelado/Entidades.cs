@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Entidades  {
 
-    public float MinSwipeLength = 5f;
+    /*public float MinSwipeLength = 5f;
 
     public Vector3 firstPressPos;
     public Vector3 secondPressPos;
@@ -32,5 +32,5 @@ public class Entidades  {
 	// Update is called once per frame
 	void Update () {
 		
-	}
+	}*/
 }
