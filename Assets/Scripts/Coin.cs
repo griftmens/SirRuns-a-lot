@@ -9,14 +9,14 @@ public class Coin : MonoBehaviour {
     private int score;
 	// Use this for initialization
 	void Start () {
-        textScore.text = "";
+        //textScore.text = "";
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
 		transform.Rotate (0,0,100*Time.deltaTime);
-        textScore.text = "" + score;
+        //textScore.text = "" + score;
 		
 	}
 

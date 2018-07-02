@@ -9,7 +9,7 @@ public class Movement : MonoBehaviour {
     
 	Transform Move;
 	public static Movement instance;
-	public float Speed_floor = 0.2f; //no sirve
+	public float Speed_floor = 8f; //no sirve
 
 	void Awake()
 	{

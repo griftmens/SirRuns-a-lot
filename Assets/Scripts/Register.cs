@@ -89,6 +89,7 @@ public class Register : MonoBehaviour
 
 			currentSwipe.Normalize();
 			
+			//El personaje debe estar en 1.5 en Y!!!
 			if (currentSwipe.y > 0 && currentSwipe.x > -0.5f && currentSwipe.x < 0.5f  && Jumping == false && Sliding == false && Player.transform.position.y == 1.5f)
 			{
 				SwipeDirection = Swipe.Up;
