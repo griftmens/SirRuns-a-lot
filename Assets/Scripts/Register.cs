@@ -51,8 +51,8 @@ public class Register : MonoBehaviour
 		Sliding = false;
 		Lane = 1;
 	}
-	
-	private void Update()
+
+    private void Update()
 	{
 		DetectSwipe();
 
@@ -93,16 +93,16 @@ public class Register : MonoBehaviour
 			{
 				SwipeDirection = Swipe.Up;
 				Debug.Log("Arriba");
-				targetS.transform.position = targetJ.transform.position; //Salto
-				Jumping = true; //Salto
+                targetS.transform.position = targetJ.transform.position; //Salto
+                Jumping = true; //Salto
 
-				//if (jump == null)
-					//jump = Jump(); 
-				
-				StopCoroutine("Jump");//Salto
-				StartCoroutine("Jump");//Salto
-				
-			}
+                //if (jump == null)
+                //jump = Jump(); 
+
+                StopCoroutine("Jump");//Salto
+                StartCoroutine("Jump");//Salto
+
+            }
 			else if (currentSwipe.y < 0 && currentSwipe.x > -0.5f && currentSwipe.x < 0.5f && Sliding == false && Jumping == false && Player.transform.position.y == 1.5f)
 			{
 				SwipeDirection = Swipe.Down;
