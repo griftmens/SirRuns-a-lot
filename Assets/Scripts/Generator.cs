@@ -29,7 +29,8 @@ public class Generator : MonoBehaviour {
 
 			startingPos.position = firstPos.transform.position;
             //GameObject tile = Instantiate(Template[Random.Range(0,Template.Length)], firstPos.transform.position, Quaternion.identity);
-			GameObject tile = Instantiate(Template[Random.Range(0,Template.Length)], startingPos.position, Quaternion.identity);
+			GameObject tile = Instantiate(Template[Random.Range(0,Template.Length)], startingPos.position, new Quaternion(0, 0.5f, 0, 0));
+			startingPos = tile.transform.Find("Helper");
 
 
         string[] numbers = "1-2-3-4-5-6-7-8-9-0".Split('-');
@@ -45,7 +46,7 @@ public class Generator : MonoBehaviour {
 
 	public void Spawn()
 	{
-		GameObject tile = Instantiate(Template[Random.Range(0,Template.Length)], startingPos.position, Quaternion.identity);
+		GameObject tile = Instantiate(Template[Random.Range(0,Template.Length)], startingPos.position, new Quaternion(0, 0.5f, 0, 0));
         startingPos = tile.transform.Find("Helper");
 		//Instantiate(Template[Random.Range(0,8)], transform.position, transform.rotation);
 	}
