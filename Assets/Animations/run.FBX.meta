@@ -1,0 +1,462 @@
+fileFormatVersion: 2
+guid: d1cbca3ad78e8d04d98273702fa4779c
+timeCreated: 1530624994
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Base Human
+    100002: Base HumanHead
+    100004: Base HumanHeadBone001
+    100006: Base HumanHeadBone001Bone001
+    100008: Base HumanHeadBone001Bone001Bone001
+    100010: Base HumanHeadBone001Bone001Bone001Bone001
+    100012: Base HumanHeadBone001Bone001Bone001Bone001Bone001
+    100014: Base HumanHeadBone001Bone001Bone001Bone001Bone001Bone001
+    100016: Base HumanHeadBone001Bone001Bone001Bone001Bone001Bone001Bone001
+    100018: Base HumanLCalf
+    100020: Base HumanLCollarbone
+    100022: Base HumanLDigit11
+    100024: Base HumanLDigit11 1
+    100026: Base HumanLDigit12
+    100028: Base HumanLDigit12 1
+    100030: Base HumanLDigit13
+    100032: Base HumanLDigit21
+    100034: Base HumanLDigit21 1
+    100036: Base HumanLDigit22
+    100038: Base HumanLDigit22 1
+    100040: Base HumanLDigit23
+    100042: Base HumanLDigit31
+    100044: Base HumanLDigit31 1
+    100046: Base HumanLDigit32
+    100048: Base HumanLDigit32 1
+    100050: Base HumanLDigit33
+    100052: Base HumanLDigit41
+    100054: Base HumanLDigit42
+    100056: Base HumanLDigit43
+    100058: Base HumanLFoot
+    100060: Base HumanLForearm
+    100062: Base HumanLPalm
+    100064: Base HumanLPlatform
+    100066: Base HumanLThigh
+    100068: Base HumanLUpperarm
+    100070: Base HumanNeck1
+    100072: Base HumanNeck2
+    100074: Base HumanPelvis
+    100076: Base HumanRCalf
+    100078: Base HumanRCollarbone
+    100080: Base HumanRDigit11
+    100082: Base HumanRDigit11 1
+    100084: Base HumanRDigit12
+    100086: Base HumanRDigit12 1
+    100088: Base HumanRDigit13
+    100090: Base HumanRDigit21
+    100092: Base HumanRDigit21 1
+    100094: Base HumanRDigit22
+    100096: Base HumanRDigit22 1
+    100098: Base HumanRDigit23
+    100100: Base HumanRDigit31
+    100102: Base HumanRDigit31 1
+    100104: Base HumanRDigit32
+    100106: Base HumanRDigit32 1
+    100108: Base HumanRDigit33
+    100110: Base HumanRDigit41
+    100112: Base HumanRDigit42
+    100114: Base HumanRDigit43
+    100116: Base HumanRFoot
+    100118: Base HumanRForearm
+    100120: Base HumanRibcage
+    100122: Base HumanRPalm
+    100124: Base HumanRPlatform
+    100126: Base HumanRThigh
+    100128: Base HumanRUpperarm
+    100130: Base HumanSpine1
+    100132: Base HumanSpine2
+    100134: Base HumanSpine3
+    100136: Base HumanSpine4
+    100138: group
+    100140: pasted__group_pasted__pCylinder2_pasted__pCylinder4
+    100142: pasted__pCube5
+    100144: pasted__polySurface112
+    100146: pasted__polySurface112 1
+    100148: pasted__polySurface113
+    100150: pasted__polySurface113 1
+    100152: pasted__polySurface114
+    100154: pasted__polySurface115
+    100156: pasted__polySurface116
+    100158: pasted__polySurface117
+    100160: pasted__polySurface125
+    100162: pasted__polySurface126
+    100164: pasted__polySurface127
+    100166: pasted__polySurface128
+    100168: pasted__polySurface129
+    100170: pasted__polySurface134
+    100172: pasted__polySurface135
+    100174: pasted__polySurface138
+    100176: pasted__polySurface139
+    100178: pasted__polySurface140
+    100180: pasted__polySurface141
+    100182: pasted__polySurface144
+    100184: pasted__polySurface145
+    100186: pasted__polySurface145 1
+    100188: pasted__polySurface146
+    100190: pasted__polySurface147
+    100192: pasted__polySurface165
+    100194: pasted__polySurface165 1
+    100196: pasted__polySurface166
+    100198: pasted__polySurface168
+    100200: pasted__polySurface169
+    100202: pasted__polySurface170
+    100204: pasted__polySurface170 1
+    100206: pasted__polySurface171
+    100208: pasted__polySurface172
+    100210: pasted__polySurface174
+    100212: pasted__polySurface175
+    100214: pasted__polySurface176
+    100216: pasted__polySurface177
+    100218: pasted__polySurface178
+    100220: pasted__polySurface179
+    100222: pasted__polySurface179 1
+    100224: pasted__polySurface181
+    100226: pasted__polySurface182
+    100228: pasted__polySurface2
+    100230: pasted__polySurface20
+    100232: pasted__polySurface44
+    100234: pasted__polySurface8
+    100236: pasted__pSphere21
+    100238: pasted__pSphere23
+    100240: pasted__pSphere24
+    100242: pasted__pSphere25
+    100244: pasted__pSphere26
+    100246: pasted__transform60
+    100248: pasted__transform61
+    100250: pasted__transform62
+    100252: pasted__transform63
+    100254: pasted__transform64
+    100256: pasted__transform65
+    100258: pasted__transform66
+    100260: pasted__transform67
+    100262: pasted__transform68
+    100264: pasted__transform69
+    100266: pasted__transform70
+    100268: pasted__transform71
+    100270: pasted__transform72
+    100272: pasted__transform73
+    100274: pasted__transform74
+    100276: pasted__transform75
+    100278: pasted__transform76
+    100280: pasted__transform77
+    100282: pasted__transform78
+    100284: pasted__transform79
+    100286: pasted__transform80
+    100288: pasted__transform81
+    100290: pasted__transform82
+    100292: pasted__transform83
+    100294: pasted__transform84
+    100296: pasted__transform85
+    100298: pasted__transform86
+    100300: pasted__transform87
+    100302: pasted__transform88
+    100304: pasted__transform89
+    100306: pasted__transform90
+    100308: pasted__transform91
+    100310: pasted__transform92
+    100312: pasted__transform93
+    100314: pasted__transform94
+    100316: //RootNode
+    100318: transform1
+    100320: transform10
+    100322: transform11
+    100324: transform12
+    100326: transform2
+    100328: transform3
+    100330: transform4
+    100332: transform5
+    100334: transform6
+    100336: transform7
+    100338: transform8
+    100340: transform9
+    400000: Base Human
+    400002: Base HumanHead
+    400004: Base HumanHeadBone001
+    400006: Base HumanHeadBone001Bone001
+    400008: Base HumanHeadBone001Bone001Bone001
+    400010: Base HumanHeadBone001Bone001Bone001Bone001
+    400012: Base HumanHeadBone001Bone001Bone001Bone001Bone001
+    400014: Base HumanHeadBone001Bone001Bone001Bone001Bone001Bone001
+    400016: Base HumanHeadBone001Bone001Bone001Bone001Bone001Bone001Bone001
+    400018: Base HumanLCalf
+    400020: Base HumanLCollarbone
+    400022: Base HumanLDigit11
+    400024: Base HumanLDigit11 1
+    400026: Base HumanLDigit12
+    400028: Base HumanLDigit12 1
+    400030: Base HumanLDigit13
+    400032: Base HumanLDigit21
+    400034: Base HumanLDigit21 1
+    400036: Base HumanLDigit22
+    400038: Base HumanLDigit22 1
+    400040: Base HumanLDigit23
+    400042: Base HumanLDigit31
+    400044: Base HumanLDigit31 1
+    400046: Base HumanLDigit32
+    400048: Base HumanLDigit32 1
+    400050: Base HumanLDigit33
+    400052: Base HumanLDigit41
+    400054: Base HumanLDigit42
+    400056: Base HumanLDigit43
+    400058: Base HumanLFoot
+    400060: Base HumanLForearm
+    400062: Base HumanLPalm
+    400064: Base HumanLPlatform
+    400066: Base HumanLThigh
+    400068: Base HumanLUpperarm
+    400070: Base HumanNeck1
+    400072: Base HumanNeck2
+    400074: Base HumanPelvis
+    400076: Base HumanRCalf
+    400078: Base HumanRCollarbone
+    400080: Base HumanRDigit11
+    400082: Base HumanRDigit11 1
+    400084: Base HumanRDigit12
+    400086: Base HumanRDigit12 1
+    400088: Base HumanRDigit13
+    400090: Base HumanRDigit21
+    400092: Base HumanRDigit21 1
+    400094: Base HumanRDigit22
+    400096: Base HumanRDigit22 1
+    400098: Base HumanRDigit23
+    400100: Base HumanRDigit31
+    400102: Base HumanRDigit31 1
+    400104: Base HumanRDigit32
+    400106: Base HumanRDigit32 1
+    400108: Base HumanRDigit33
+    400110: Base HumanRDigit41
+    400112: Base HumanRDigit42
+    400114: Base HumanRDigit43
+    400116: Base HumanRFoot
+    400118: Base HumanRForearm
+    400120: Base HumanRibcage
+    400122: Base HumanRPalm
+    400124: Base HumanRPlatform
+    400126: Base HumanRThigh
+    400128: Base HumanRUpperarm
+    400130: Base HumanSpine1
+    400132: Base HumanSpine2
+    400134: Base HumanSpine3
+    400136: Base HumanSpine4
+    400138: group
+    400140: pasted__group_pasted__pCylinder2_pasted__pCylinder4
+    400142: pasted__pCube5
+    400144: pasted__polySurface112
+    400146: pasted__polySurface112 1
+    400148: pasted__polySurface113
+    400150: pasted__polySurface113 1
+    400152: pasted__polySurface114
+    400154: pasted__polySurface115
+    400156: pasted__polySurface116
+    400158: pasted__polySurface117
+    400160: pasted__polySurface125
+    400162: pasted__polySurface126
+    400164: pasted__polySurface127
+    400166: pasted__polySurface128
+    400168: pasted__polySurface129
+    400170: pasted__polySurface134
+    400172: pasted__polySurface135
+    400174: pasted__polySurface138
+    400176: pasted__polySurface139
+    400178: pasted__polySurface140
+    400180: pasted__polySurface141
+    400182: pasted__polySurface144
+    400184: pasted__polySurface145
+    400186: pasted__polySurface145 1
+    400188: pasted__polySurface146
+    400190: pasted__polySurface147
+    400192: pasted__polySurface165
+    400194: pasted__polySurface165 1
+    400196: pasted__polySurface166
+    400198: pasted__polySurface168
+    400200: pasted__polySurface169
+    400202: pasted__polySurface170
+    400204: pasted__polySurface170 1
+    400206: pasted__polySurface171
+    400208: pasted__polySurface172
+    400210: pasted__polySurface174
+    400212: pasted__polySurface175
+    400214: pasted__polySurface176
+    400216: pasted__polySurface177
+    400218: pasted__polySurface178
+    400220: pasted__polySurface179
+    400222: pasted__polySurface179 1
+    400224: pasted__polySurface181
+    400226: pasted__polySurface182
+    400228: pasted__polySurface2
+    400230: pasted__polySurface20
+    400232: pasted__polySurface44
+    400234: pasted__polySurface8
+    400236: pasted__pSphere21
+    400238: pasted__pSphere23
+    400240: pasted__pSphere24
+    400242: pasted__pSphere25
+    400244: pasted__pSphere26
+    400246: pasted__transform60
+    400248: pasted__transform61
+    400250: pasted__transform62
+    400252: pasted__transform63
+    400254: pasted__transform64
+    400256: pasted__transform65
+    400258: pasted__transform66
+    400260: pasted__transform67
+    400262: pasted__transform68
+    400264: pasted__transform69
+    400266: pasted__transform70
+    400268: pasted__transform71
+    400270: pasted__transform72
+    400272: pasted__transform73
+    400274: pasted__transform74
+    400276: pasted__transform75
+    400278: pasted__transform76
+    400280: pasted__transform77
+    400282: pasted__transform78
+    400284: pasted__transform79
+    400286: pasted__transform80
+    400288: pasted__transform81
+    400290: pasted__transform82
+    400292: pasted__transform83
+    400294: pasted__transform84
+    400296: pasted__transform85
+    400298: pasted__transform86
+    400300: pasted__transform87
+    400302: pasted__transform88
+    400304: pasted__transform89
+    400306: pasted__transform90
+    400308: pasted__transform91
+    400310: pasted__transform92
+    400312: pasted__transform93
+    400314: pasted__transform94
+    400316: //RootNode
+    400318: transform1
+    400320: transform10
+    400322: transform11
+    400324: transform12
+    400326: transform2
+    400328: transform3
+    400330: transform4
+    400332: transform5
+    400334: transform6
+    400336: transform7
+    400338: transform8
+    400340: transform9
+    2100000: blinn1
+    4300000: pasted__polySurface112
+    7400000: run
+    9500000: //RootNode
+    13700000: pasted__polySurface112
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: run
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 27
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
