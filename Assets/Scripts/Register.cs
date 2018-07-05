@@ -93,6 +93,7 @@ public class Register : MonoBehaviour
 			if (currentSwipe.y > 0 && currentSwipe.x > -0.5f && currentSwipe.x < 0.5f  && Jumping == false && Sliding == false && Player.transform.position.y == 1.5f)
 			{
 				SwipeDirection = Swipe.Up;
+				Frog.instance.Jump();
 				Debug.Log("Arriba");
                 targetS.transform.position = targetJ.transform.position; //Salto
                 Jumping = true; //Salto
@@ -107,9 +108,10 @@ public class Register : MonoBehaviour
 			else if (currentSwipe.y < 0 && currentSwipe.x > -0.5f && currentSwipe.x < 0.5f && Sliding == false && Jumping == false && Player.transform.position.y == 1.5f)
 			{
 				SwipeDirection = Swipe.Down;
+				Frog.instance.Slide();
 				Debug.Log("Abajo");
-				targetS.transform.position += new Vector3(0, -0.5f, 0);
-				Player.transform.rotation = Quaternion.Euler (-90,0,0);
+				//targetS.transform.position += new Vector3(0, -0.5f, 0);
+				//Player.transform.rotation = Quaternion.Euler (-90,0,0);
 				Sliding = true;
 
 				if(slide == null)
@@ -146,6 +148,7 @@ public class Register : MonoBehaviour
 
 		yield return new WaitForSeconds(0.4f);
 		
+		Frog.instance.False();
 		targetS.transform.position = new Vector3(targetS.transform.position.x,1.5f,targetS.transform.position.z);
 		Jumping = false;
 	}
@@ -160,8 +163,9 @@ public class Register : MonoBehaviour
 		
 		yield return new WaitForSeconds(0.5f);
 
-		targetS.transform.position += new Vector3(0, 0.5f, 0);
-		Player.transform.rotation = Quaternion.Euler (0,0,0);
+		Frog.instance.False();
+		//targetS.transform.position += new Vector3(0, 0.5f, 0);
+		//Player.transform.rotation = Quaternion.Euler (0,0,0);
 		Sliding = false;
 	}	
 }

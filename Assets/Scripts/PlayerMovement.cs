@@ -56,6 +56,7 @@ public class PlayerMovement : MonoBehaviour {
 	{
 		if(other.gameObject.tag == "Hazard")
 		{
+			Frog.instance.Death();
 			GameController.instance.InvokeRepeating("DeAccel",0.1f,2);
 			StopCoroutine("Restart");
 			StartCoroutine("Restart");			
