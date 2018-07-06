@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ModSwipe  {
+public class ModSwipe : MonoBehaviour  {
 
     public float MinSwipeLength = 5f;
 

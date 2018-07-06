@@ -32,7 +32,7 @@ public class PlayerMovement : MonoBehaviour {
 		{
 			Generator.instance.Spawn();
 			Destroy(other.gameObject,1.5f);
-            ms.contador = ms.contador + 1;
+            Generator.instance.contador +=  1;
 		}
 		
 	}

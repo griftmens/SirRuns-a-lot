@@ -148,7 +148,7 @@ public class SwipeDet : MonoBehaviour
 			yield return null;
 		}
 
-		yield return new WaitForSeconds(0.4f);
+		yield return new WaitForSeconds(0.5f);
 		
 		Frog.instance.False();
 		targetS.transform.position = new Vector3(targetS.transform.position.x,1.5f,targetS.transform.position.z);

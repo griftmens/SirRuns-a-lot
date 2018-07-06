@@ -12,6 +12,8 @@ public class Generator : MonoBehaviour
     public GameObject[] Boss;
     public static Generator instance;
 
+    public int contador;
+
     //procedural
     public GameObject firstPos;
     public GameObject[] tiles;
@@ -31,7 +33,7 @@ public class Generator : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-
+        contador = 0;
         world = "Swamp";
         startingPos.position = firstPos.transform.position;
         //GameObject tile = Instantiate(Template[Random.Range(0,Template.Length)], firstPos.transform.position, Quaternion.identity);
@@ -48,15 +50,19 @@ public class Generator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (ms.contador == 10)
+        if (contador == 10)
         {
             if (world == "Swamp")
             {
                 world = "Castle";
+                contador = 0;
+            }else if (world == "Castle")
+            { 
+            world = "Boss";
+            contador = 0;
             }
         }
-        else
-            world = "Boss";
+        
     }
 
     public void Spawn()
