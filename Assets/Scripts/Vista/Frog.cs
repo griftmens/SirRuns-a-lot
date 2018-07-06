@@ -8,6 +8,8 @@ public class Frog : MonoBehaviour {
 
 	public static Frog instance;
 
+	public Transform Player;
+
 	
 	void Awake()
 	{
@@ -21,6 +23,8 @@ public class Frog : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+		gameObject.transform.position = new Vector3(Player.transform.position.x,Player.transform.position.y,Player.transform.position.z);
 		
 	}
 

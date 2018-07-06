@@ -52,6 +52,13 @@ public class PlayerMovement : MonoBehaviour {
 		{
 			Destroy(other.gameObject);
 		}
+
+		if(other.gameObject.tag == "Hole")
+		{
+			Target_origin.transform.position = new Vector3(Target_origin.transform.position.x, -50, transform.position.z);
+			Pause.instance.GameO();
+			GameController.instance.InvokeRepeating("DeAccel",0.1f,2);
+		} 
 	}
 	void OnCollisionEnter(Collision other)
 	{

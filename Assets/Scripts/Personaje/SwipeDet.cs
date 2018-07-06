@@ -32,6 +32,8 @@ public class SwipeDet : MonoBehaviour
 	public Transform Player;
 	public bool Sliding, Jumping;
 
+	
+
 	//public int Lane;
 
 	private IEnumerator jump;
@@ -49,6 +51,7 @@ public class SwipeDet : MonoBehaviour
 
 	private void Start()
 	{
+		
 		Jumping = false;
 		Sliding = false;
 		ms.Lane = 1;
@@ -98,11 +101,7 @@ public class SwipeDet : MonoBehaviour
 				Frog.instance.Jump();
 				Debug.Log("Arriba");
                 targetS.transform.position = targetJ.transform.position; //Salto
-                Jumping = true; //Salto
-
-                //if (jump == null)
-                //jump = Jump(); 
-
+                Jumping = true;
                 StopCoroutine("Jump");//Salto
                 StartCoroutine("Jump");//Salto
 
@@ -111,11 +110,10 @@ public class SwipeDet : MonoBehaviour
 			{
 				SwipeDirection = Swipe.Down;
 				Frog.instance.Slide();
+				Player.transform.rotation = Quaternion.Euler (-90,0,0);
 				Debug.Log("Abajo");
-				//targetS.transform.position += new Vector3(0, -0.5f, 0);
-				//Player.transform.rotation = Quaternion.Euler (-90,0,0);
 				Sliding = true;
-
+				
 				if(slide == null)
 					slide = Slide();			
 
@@ -148,7 +146,7 @@ public class SwipeDet : MonoBehaviour
 			yield return null;
 		}
 
-		yield return new WaitForSeconds(0.5f);
+		yield return new WaitForSeconds(0.55f);
 		
 		Frog.instance.False();
 		targetS.transform.position = new Vector3(targetS.transform.position.x,1.5f,targetS.transform.position.z);
@@ -163,11 +161,12 @@ public class SwipeDet : MonoBehaviour
 			yield return null;
 		}
 		
-		yield return new WaitForSeconds(0.5f);
+		yield return new WaitForSeconds(1f);
 
 		Frog.instance.False();
+		
 		//targetS.transform.position += new Vector3(0, 0.5f, 0);
-		//Player.transform.rotation = Quaternion.Euler (0,0,0);
+		Player.transform.rotation = Quaternion.Euler (0,0,0);
 		Sliding = false;
 	}	
 }

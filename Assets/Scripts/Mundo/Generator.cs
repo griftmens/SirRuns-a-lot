@@ -63,6 +63,11 @@ public class Generator : MonoBehaviour
             }
         }
         
+        if(world == "Boss" && contador == 5)
+        {
+            GameController.instance.InvokeRepeating("DeAccel",0.1f,2);
+            Pause.instance.GameO();
+        }
     }
 
     public void Spawn()
@@ -80,6 +85,8 @@ public class Generator : MonoBehaviour
                 break;
 
             case "Boss":
+                GameObject tile3 = Instantiate(Boss[Random.Range(0, Swamp.Length)], startingPos.position, new Quaternion(0, 0.5f, 0, 0));
+                startingPos = tile3.transform.Find("Helper");
                 break;
         }
         /*if (ms.contador <= 10)
