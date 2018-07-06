@@ -14,4 +14,6 @@ public class ModSwipe  {
     public Vector3 secondClickPos;
 
     public int Lane;
+
+    public int contador;
 }

@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour {
 
-    
+    ModSwipe ms = new ModSwipe();
 	public Transform Target_origin; //Salto
 
 	// Use this for initialization
@@ -31,7 +31,8 @@ public class PlayerMovement : MonoBehaviour {
 		if(other.gameObject.tag == "Plantilla")
 		{
 			Generator.instance.Spawn();
-			Destroy(other.gameObject,1.5f);	
+			Destroy(other.gameObject,1.5f);
+            ms.contador = ms.contador + 1;
 		}
 		
 	}
